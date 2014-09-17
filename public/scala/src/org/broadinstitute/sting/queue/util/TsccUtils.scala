@@ -117,6 +117,9 @@ object TsccUtils {
    }else if(genome == "mm9") {
       retval = "/home/gpratt/clipper/clipper/data/region/mm9_genes.bed"
    }
+   else if(genome == "ce10") {
+      retval = "/home/gpratt/clipper/clipper/data/region/ce10_genes.bed"
+   }
 
    retval
   }
