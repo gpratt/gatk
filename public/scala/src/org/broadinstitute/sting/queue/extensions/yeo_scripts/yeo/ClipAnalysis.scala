@@ -10,12 +10,21 @@ class ClipAnalysis(@Input inBam: File, @Input inBed: File, @Argument species: St
 
   override def shortDescription = "CLIP_Analysis"
  this.wallTime = Option((4 * 60 * 60).toLong)
+  var as_location = AS_Structure
 
+  if(as_location == "none") {
+    as_location = null
+    println("setting location")
+    println(inBam)
+  }
+  
+
+  println(as_location)
   def commandLine = "clip_analysis " +
     required("--clusters", inBed) +
     required("-s", species) +
     required("--bam", inBam) +
-    required("--AS_Structure", AS_Structure) +
+    optional("--AS_Structure", as_location) +
     required("--genome_location", genome_location) +
     required("--phastcons_location", phastcons_location) +
     required("--nrand", 3) +

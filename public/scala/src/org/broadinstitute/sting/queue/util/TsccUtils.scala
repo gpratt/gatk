@@ -55,6 +55,8 @@ object TsccUtils {
       retval = "/projects/ps-yeolab/genomes/combined_hg19_hcmv"
     } else if(genome == "GRCh38") { 
       retval = "/projects/ps-yeolab/genomes/GRCh38/star"
+    } else if(genome =="ce11") {
+      retval = "/projects/ps-yeolab/genomes/ce11/STAR"
     }
     retval
   }
@@ -70,7 +72,7 @@ object TsccUtils {
     if (genome == "hg19") {
       retval = "/projects/ps-yeolab/genomes/RepBase18.05.fasta/species_specic/homo_sapiens_repbase"
     }else if (genome == "GRCh38") {
-      retval = "/projects/ps-yeolab/genomes/RepBase18.05.fasta/species_specic/homo_sapiens_repbase"
+      retval = "/projects/ps-yeolab/genomes/RepBase18.05.fasta/species_specic/homo_sapiens_repbase_v2"
     }else if(genome == "mm9") {
       retval = "/projects/ps-yeolab/genomes/RepBase18.05.fasta/species_specic/mus_musculus_repbase"
     }else if(genome == "mm10") {
@@ -127,6 +129,8 @@ object TsccUtils {
      retval = "/projects/ps-yeolab/genomes/combined_hg19_hcmv/chrNameLength.txt"
    } else if (genome == "GRCh38") {
      retval = "/projects/ps-yeolab/genomes/GRCh38/star/chrNameLength.txt"
+   } else if(genome =="ce11") {
+     retval = "/projects/ps-yeolab/genomes/ce11/ce11.chrom.sizes"
    }
    retval
   }
@@ -159,6 +163,8 @@ object TsccUtils {
       retval = "/projects/ps-yeolab/genomes/hg19/hg19data4"
    }else if(genome == "mm9") {
       retval = "/projects/ps-yeolab/genomes/mm9/mm9data4"
+   } else if(genome == "GRCh38") {
+     retval = "none"
    }
 
    retval
@@ -184,7 +190,9 @@ object TsccUtils {
      retval = "/projects/ps-yeolab/genomes/S288C_R64/S288C_reference_genome_R64-2-1_20150113/S288C_reference_sequence_R64-2-1_20150113.fsa"
    }else if(genome == "GRCh38") {
      retval = "/projects/ps-yeolab/genomes/GRCh38/chromosomes/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
-   } 
+   } else if(genome == "ce11") {
+     retval = "/projects/ps-yeolab/genomes/ce11/ce11.fa"
+   }
    retval
   }
 
@@ -199,7 +207,7 @@ object TsccUtils {
       retval = "/projects/ps-yeolab/genomes/hg19/hg19_phastcons.bw"
    }else if(genome == "mm9") {
       retval = "/projects/ps-yeolab/genomes/mm9/mm9_phastcons.bw"
-   }else if(genome == "mm9") {
+   }else if(genome == "GRCh38") {
      retval = "/projects/ps-yeolab/genomes/GRCh38/hg38.phastCons20way.bw"
    }
 
@@ -242,7 +250,7 @@ object TsccUtils {
    }else if(genome == "ce10") {
       retval = "/projects/ps-yeolab/genomes/ce10/WS244.genes.gff3.db"
    }else if(genome == "GRCh38") {
-      retval = "/projects/ps-yeolab/genomes/GRCh38/gencode.v24.primary_assembly.annotation.gtf.db"
+      retval = "/projects/ps-yeolab/genomes/GRCh38/gencode/v24/gencode.v24.primary_assembly.annotation.gtf.db"
    }
 
    retval
